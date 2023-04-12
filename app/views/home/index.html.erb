@@ -1,0 +1,10 @@
+<h1>Home#index</h1>
+<% if user_signed_in? %>
+  Hello. You are signed as <%= current_user.email %>
+<% else %>
+  <%= button_to user_keycloakopenid_omniauth_authorize_path, method: :post do %>
+    <span> Login with Keycloak </span>
+  <% end %>
+<% end %>
+
+
